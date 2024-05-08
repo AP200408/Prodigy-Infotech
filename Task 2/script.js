@@ -11,6 +11,13 @@ let milliseconds = 0,
   hours = 0;
 let lapCounter = 1;
 
+const menuIcon = document.querySelector(".menu-icon");
+const navigationContainer = document.querySelector(".navigation-container");
+
+menuIcon.addEventListener("click", () => {
+  navigationContainer.classList.toggle("active");
+});
+
 startPauseBtn.addEventListener("click", startStop);
 resetBtn.addEventListener("click", reset);
 lapBtn.addEventListener("click", lap);
