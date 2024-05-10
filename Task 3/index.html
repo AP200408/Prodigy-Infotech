@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="nav">
+
+    <div class="nav">
         <h1 class="logo">Anurag.<span>P</span></h1>
         <ul class="navigation-container">
             <li><a href="../Task 1/index.html">Home</a></li>
@@ -15,22 +16,34 @@
             <li><a href="#">Contact</a></li>
         </ul>
     </div>
-    <div class="container">
-        <!-- <h1>Tic Tac Toe</h1>
-        <div id="board" class="board">
-            <div class="cell" data-cell="0"></div>
-            <div class="cell" data-cell="1"></div>
-            <div class="cell" data-cell="2"></div>
-            <div class="cell" data-cell="3"></div>
-            <div class="cell" data-cell="4"></div>
-            <div class="cell" data-cell="5"></div>
-            <div class="cell" data-cell="6"></div>
-            <div class="cell" data-cell="7"></div>
-            <div class="cell" data-cell="8"></div>
+
+    <div id="game-container">
+        <div id="player-names">
+            <label for="player1">Player 1: </label>
+            <input type="text" id="player1" placeholder="Name">
+            <label for="player2">Player 2: </label>
+            <input type="text" id="player2" placeholder="Name">
+            <button id="start-btn" onclick="startGame()">Start Game</button>
         </div>
-        <div id="message" class="message"></div>
-        <button id="restartButton" class="restart-button">Restart</button> -->
+        <div class="name-displayer" style="display: none;"></div>
+        <div id="actual-game" style="display: none;">
+            <div id="board" class="board">
+                <div class="cell" onclick="handleMove(0)"></div>
+                <div class="cell" onclick="handleMove(1)"></div>
+                <div class="cell" onclick="handleMove(2)"></div>
+                <div class="cell" onclick="handleMove(3)"></div>
+                <div class="cell" onclick="handleMove(4)"></div>
+                <div class="cell" onclick="handleMove(5)"></div>
+                <div class="cell" onclick="handleMove(6)"></div>
+                <div class="cell" onclick="handleMove(7)"></div>
+                <div class="cell" onclick="handleMove(8)"></div>
+            </div>
+            <button class="reset-btn" onclick="resetGame()">Reset</button>
+            <button class="undo-btn" onclick="undoMove()">Undo</button>
+            <div id="message" class="message"></div>
+        </div>
     </div>
+    
     <script src="script.js"></script>
 </body>
 </html>

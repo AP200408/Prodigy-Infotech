@@ -117,7 +117,6 @@ body {
   margin-left: 10px;
 }
 
-/* Media Query for smaller screens */
 @media screen and (max-width: 600px) {
   .nav {
     flex-direction: column;

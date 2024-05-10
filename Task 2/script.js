@@ -53,7 +53,7 @@ function updateTimer() {
     ":" +
     padNumber(seconds) +
     ":" +
-    padNumber(milliseconds, 2);
+    padNumber(milliseconds, 3);
 }
 
 function lap() {
@@ -86,7 +86,7 @@ function reset() {
   minutes = 0;
   hours = 0;
   lapCounter = 1;
-  display.textContent = "00:00:00:00";
+  display.textContent = "00:00:00:000";
   lapsList.innerHTML = "";
   startPauseBtn.textContent = "Start";
 }
