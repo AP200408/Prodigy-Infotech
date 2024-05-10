@@ -2,7 +2,7 @@ let currentPlayer = "";
 let player1Name = "";
 let player2Name = "";
 let board = ["", "", "", "", "", "", "", "", ""];
-let moveHistory = []; // Maintain a history of previous moves
+let moveHistory = [];
 let PLAYERS = {};
 
 const winningCombos = [
@@ -33,7 +33,6 @@ function startGame() {
 
 function handleMove(cellIndex) {
   if (currentPlayer && board[cellIndex] === "" && !checkWinner()) {
-    // Save previous move to history
     moveHistory.push({ player: currentPlayer, board: [...board] });
 
     board[cellIndex] = currentPlayer;
